@@ -50,9 +50,11 @@ public class TradeCountManager extends Configured implements Tool {
                 fileSystem.delete(outPath, true);// true的意思是，就算output有东西，也一带删除
             }
 
-            Job job = Job.getInstance(conf, "trade-user-count");
+            Job job = Job.getInstance(conf, "trade-count");
             job.setJarByClass(TradeCountManager.class);
             job.setMapperClass(TradeCountMapper.class);
+            //
+            job.setCombinerClass(TradeCountReducer.class);
             job.setReducerClass(TradeCountReducer.class);
             job.setMapOutputKeyClass(Text.class);
             //此处要和Map的输出类型对应
