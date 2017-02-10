@@ -54,7 +54,7 @@ public class TradeCountManager extends Configured implements Tool {
             job.setJarByClass(TradeCountManager.class);
             job.setMapperClass(TradeCountMapper.class);
             //
-            job.setCombinerClass(TradeCountReducer.class);
+            //job.setCombinerClass(TradeCountReducer.class);
             job.setReducerClass(TradeCountReducer.class);
             job.setMapOutputKeyClass(Text.class);
             //此处要和Map的输出类型对应
