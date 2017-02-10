@@ -71,7 +71,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.ytx.data.emr.LogManager</mainClass>
+                            <mainClass>com.data.emr.trade.count.TradeCountManager</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
